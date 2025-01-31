@@ -3,6 +3,10 @@ import torch
 import torch.nn as nn
 from typing import Optional, Tuple
 
+from embeddings import BertEmbeddings
+
+from attention import TransformerBlock
+
 class BertConfig:
     def __init__(self):
         self.vocab_size = 30522  # 词表大小
