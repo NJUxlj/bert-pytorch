@@ -1,4 +1,4 @@
-
+import json
 import torch
 from torch.utils.data import Dataset
 from typing import Dict, List, Optional
@@ -11,12 +11,17 @@ class BertPreTrainDataset(Dataset):
     """
     def __init__(
         self,
-        texts: List[str],
-        tokenizer: PreTrainedTokenizer,
+        file_path:str=None,
+        texts: List[str]=None,
+        tokenizer: PreTrainedTokenizer=None,
         max_length: int = 512,
         mlm_probability: float = 0.15
     ):
-        self.texts = texts
+        if self.texts != None:
+            self.texts=texts
+        else:
+            self.texts = load_corpus(file_path)
+            
         self.tokenizer = tokenizer
         self.max_length = max_length
         self.mlm_probability = mlm_probability
@@ -149,3 +154,25 @@ class BertFineTuneDataset(Dataset):
             'labels': torch.tensor(label, dtype=torch.long)
         }
 
+
+
+
+
+
+
+def load_corpus(file_path)->List[str]:
+    texts = []
+    with open(file_path, mode='r', encoding='utf-8') as f:
+        parent = ""
+        for idx, line in enumerate(f):
+            line = line.strip()
+            if line=="":
+                pass
+            elif not (line.endswith("。") or line.endswith(".")):
+                parent += line
+            else:               
+                parent+=line
+                texts.append(parent)
+                parent = ""
+    return texts
+            

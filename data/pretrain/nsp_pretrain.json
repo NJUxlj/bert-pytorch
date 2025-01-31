@@ -2,17 +2,17 @@
     "version": "1.0",
     "date_created": "2024-01-31",
     "data": [
-    {
-    "id": "nsp_1",
-    "text_pairs": [
-    {
-    "text_a": "深度学习模型需要大量的数据进行训练。",
-    "text_b": "数据的质量和多样性直接影响模型的性能。",
-    "is_next": true,
-    "topic": "机器学习"
-    }
-    ]
-    },
+        {
+            "id": "nsp_1",
+            "text_pairs": [
+                {
+                    "text_a": "深度学习模型需要大量的数据进行训练。",
+                    "text_b": "数据的质量和多样性直接影响模型的性能。",
+                    "is_next": true,
+                    "topic": "机器学习"
+                }
+            ]
+        },
     {
     "id": "nsp_2",
     "text_pairs": [
