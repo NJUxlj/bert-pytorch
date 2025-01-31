@@ -1,0 +1,56 @@
+{
+    "data": [
+    {
+    "id": "qa_1",
+    "context": "人工智能（AI）是计算机科学的一个分支，它致力于研究和开发能够模拟、延伸和扩展人类智能的理论、方法、技术及应用系统。人工智能的研究包括机器学习、计算机视觉、自然语言处理等领域。",
+    "questions": [
+    {
+    "id": "q1",
+    "question": "人工智能是什么的分支？",
+    "answers": [
+    {
+    "text": "计算机科学",
+    "answer_start": 7
+    }
+    ]
+    },
+    {
+    "id": "q2",
+    "question": "人工智能研究包括哪些领域？",
+    "answers": [
+    {
+    "text": "机器学习、计算机视觉、自然语言处理",
+    "answer_start": 72
+    }
+    ]
+    }
+    ]
+    },
+    {
+    "id": "qa_2",
+    "context": "BERT是Google在2018年发布的预训练语言模型，它在多个自然语言处理任务上取得了突破性的进展。BERT采用Transformer架构，通过双向编码器来理解文本的上下文语义。",
+    "questions": [
+    {
+    "id": "q3",
+    "question": "BERT是谁发布的？",
+    "answers": [
+    {
+    "text": "Google",
+    "answer_start": 5
+    }
+    ]
+    },
+    {
+    "id": "q4",
+    "question": "BERT采用什么架构？",
+    "answers": [
+    {
+    "text": "Transformer",
+    "answer_start": 63
+    }
+    ]
+    }
+    ]
+    }
+    ]
+    }

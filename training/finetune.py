@@ -11,9 +11,9 @@ from tqdm import tqdm
 import numpy as np
 from typing import Dict, List, Optional, Tuple
 
-from ..model.bert import BERT
-from ..data.dataset import BERTDataset
-from ..config.bert_config import BERTConfig
+from ..model.bert import BertModel
+from ..data.dataset import BertFineTuneDataset
+from ..config.bert_config import BertConfig
 from ..utils.utils import set_seed, setup_logging
 
 class BERTFineTuner:
@@ -25,10 +25,10 @@ class BERTFineTuner:
     
     def __init__(
         self,
-        model: BERT,
-        config: BERTConfig,
-        train_dataset: BERTDataset,
-        val_dataset: Optional[BERTDataset] = None,
+        model: BertModel,
+        config: BertConfig,
+        train_dataset: BertFineTuneDataset,
+        val_dataset: Optional[BertFineTuneDataset] = None,
         num_labels: int = 2,
         device: str = "cuda" if torch.cuda.is_available() else "cpu"
     ):
@@ -285,14 +285,14 @@ def main():
     setup_logging()
     
     # 加载配置
-    config = BERTConfig()
+    config = BertConfig()
     
     # 加载数据集
-    train_dataset = BERTDataset(...)  # 需要实现
-    val_dataset = BERTDataset(...)    # 需要实现
+    train_dataset = BertFineTuneDataset(...)  # 需要实现
+    val_dataset = BertFineTuneDataset(...)    # 需要实现
     
     # 初始化模型
-    model = BERT(config)  # 需要实现
+    model = BertModel(config)  # 需要实现
     
     # 初始化训练器
     trainer = BERTFineTuner(

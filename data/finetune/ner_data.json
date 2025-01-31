@@ -1,0 +1,47 @@
+{
+    "data": [
+    {
+    "id": "ner_1",
+    "text": "马云在杭州创立了阿里巴巴集团",
+    "entities": [
+    {
+    "start": 0,
+    "end": 2,
+    "label": "PER", 
+    "entity": "马云"
+    },
+    {
+    "start": 3,
+    "end": 5,
+    "label": "LOC", 
+    "entity": "杭州"
+    },
+    {
+    "start": 7,
+    "end": 12,
+    "label": "ORG", 
+    "entity": "阿里巴巴"
+    }
+    ]
+    },
+    {
+    "id": "ner_2",
+    "text": "去年李明在清华大学参加了人工智能研讨会",
+    "entities": [
+    {
+    "start": 2,
+    "end": 4,
+    "label": "PER",
+    "entity": "李明"
+    },
+    {
+    "start": 5,
+    "end": 9,
+    "label": "ORG",
+    "entity": "清华大学"
+    }
+    ]
+    }
+    ],
+    "labels": ["PER", "LOC", "ORG", "TIME", "EVENT"]
+    }
